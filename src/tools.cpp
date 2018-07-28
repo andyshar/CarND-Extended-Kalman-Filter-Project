@@ -67,7 +67,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
       Hj << 0, 0, 0, 0,
             0, 0, 0, 0,
             0, 0, 0, 0;
-      return Hj
+      return Hj;
   }
 
   // Jacobian matrix

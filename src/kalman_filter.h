@@ -72,7 +72,7 @@ public:
   /**
    * Common update
    */   
-  void UpdateCommon(const VectorXd& y);
+  void UpdateCommon(const Eigen::VectorXd &y);
 
 };
 

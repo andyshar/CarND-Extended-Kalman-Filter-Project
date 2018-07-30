@@ -85,8 +85,8 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       const float phi = measurement_pack.raw_measurements_(1);
       const float ro_dot = measurement_pack.raw_measurements_(2);
 
-      const float px = ro * cos(phi);
-      const float py = ro * sin(phi);
+      float px = ro * cos(phi);
+      float py = ro * sin(phi);
       const float vx = ro_dot * cos(phi);
       const float vy = ro_dot * sin(phi);
 
@@ -102,8 +102,8 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       /**
       Initialize state.
       */
-      float px = measurement_pack.raw_measurements_(0);
-      float py = measurement_pack.raw_measurements_(1);
+      const float px = measurement_pack.raw_measurements_(0);
+      const float py = measurement_pack.raw_measurements_(1);
       ekf_.x_ << px, py, 0.0, 0.0;
     }
 

@@ -67,12 +67,12 @@ public:
   /**
    * Normalize angle
    */   
-  void KalmanFilter::NormalizeAngle(double& phi);
+  void NormalizeAngle(double& phi);
 
   /**
    * Common update
    */   
-  void KalmanFilter::UpdateCommon(const VectorXd& y);
+  void UpdateCommon(const VectorXd& y);
 
 };
 

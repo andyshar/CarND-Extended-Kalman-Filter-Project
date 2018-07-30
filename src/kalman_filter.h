@@ -64,6 +64,16 @@ public:
    */
   void UpdateEKF(const Eigen::VectorXd &z);
 
+  /**
+   * Normalize angle
+   * /   
+  void KalmanFilter::NormalizeAngle(double& phi);
+
+  /**
+   * Common update
+   * /   
+  void KalmanFilter::UpdateCommon(const VectorXd& y);
+
 };
 
 #endif /* KALMAN_FILTER_H_ */

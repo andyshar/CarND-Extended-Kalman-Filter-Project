@@ -94,7 +94,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   UpdateCommon(y);
 }
 
-void NormalizeAngle(double& phi)
+void KalmanFilter::NormalizeAngle(double& phi)
 {
   phi = atan2(sin(phi), cos(phi));
 }

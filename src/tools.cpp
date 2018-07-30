@@ -52,14 +52,14 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
   */
   MatrixXd Hj(3, 4);
   // state parameters
-  float px = x_state(0);
-  float py = x_state(1);
-  float vx = x_state(2);
-  float vy = x_state(3);
+  const float px = x_state(0);
+  const float py = x_state(1);
+  const float vx = x_state(2);
+  const float vy = x_state(3);
 
-  float c1 = px * px + py * py;
-  float c2 = sqrt(c1);
-  float c3 = c1 * c2;
+  const float c1 = px * px + py * py;
+  const float c2 = sqrt(c1);
+  const float c3 = c1 * c2;
 
   // check
   if (fabs(c1) < 0.0001){
